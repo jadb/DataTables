@@ -2138,6 +2138,7 @@
 		var sSearchStr = oSettings.oLanguage.sSearch;
 		sSearchStr = (sSearchStr.indexOf('_INPUT_') !== -1) ?
 		  sSearchStr.replace('_INPUT_', '<input type="text" />') :
+		  (sSearchStr.indexOf('<input type="text"') !== -1) ? sSearchStr :
 		  sSearchStr==="" ? '<input type="text" />' : sSearchStr+' <input type="text" />';
 		
 		var nFilter = document.createElement( 'div' );
